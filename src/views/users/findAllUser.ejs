@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách User</title>
+    <style>table, th, td { border: 1px solid black; border-collapse: collapse; padding: 8px; }</style>
+</head>
+<body>
+    <h2>Danh Sách User</h2>
+    <a href="/crud">Thêm mới User</a>
+    <br><br>
+    <table style="width:100%">
+        <tr>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+        <% for(let i = 0; i < datalist.length; i++) { %>
+        <tr>
+            <td><%= datalist[i].email %></td>
+            <td><%= datalist[i].firstName %></td>
+            <td><%= datalist[i].lastName %></td>
+            <td><%= datalist[i].address %></td>
+            <td>
+                <a href="/edit-crud?id=<%= datalist[i]._id %>">Edit</a> || 
+                <a href="/delete-crud?id=<%= datalist[i]._id %>">Delete</a>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+</body>
+</html>

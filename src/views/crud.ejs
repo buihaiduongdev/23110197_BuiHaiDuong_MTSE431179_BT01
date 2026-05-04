@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thêm mới User</title>
+  </head>
+  <body>
+    <h2>Thêm User Mới</h2>
+    <form action="/post-crud" method="post">
+      <div>
+        <label>Email: <input type="email" name="email" required /></label>
+        <label
+          >Password: <input type="password" name="password" required
+        /></label>
+      </div>
+      <br />
+      <div>
+        <label>First Name: <input type="text" name="firstName" /></label>
+        <label>Last Name: <input type="text" name="lastName" /></label>
+      </div>
+      <br />
+      <div>
+        <label>Phone: <input type="text" name="phoneNumber" /></label>
+        <label>Address: <input type="text" name="address" /></label>
+      </div>
+      <br />
+      <div>
+        <label
+          >Gender:
+          <select name="gender">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+          </select>
+        </label>
+        <label
+          >Role:
+          <select name="roleId">
+            <option value="1">Admin</option>
+            <option value="2">Doctor</option>
+            <option value="3">Patient</option>
+          </select>
+        </label>
+      </div>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sửa thông tin</title>
+  </head>
+  <body>
+    <h2>Cập Nhật Thông Tin</h2>
+    <form action="/put-crud" method="post">
+      <input type="hidden" name="id" value="<%= data._id %>" />
+
+      <div>
+        <label
+          >First Name:
+          <input type="text" name="firstName" value="<%= data.firstName %>"
+        /></label>
+      </div>
+      <br />
+      <div>
+        <label
+          >Last Name:
+          <input type="text" name="lastName" value="<%= data.lastName %>"
+        /></label>
+      </div>
+      <br />
+      <div>
+        <label
+          >Address:
+          <input type="text" name="address" value="<%= data.address %>"
+        /></label>
+      </div>
+      <br />
+      <button type="submit">Update</button>
+    </form>
+  </body>
+</html>
