@@ -19,5 +19,7 @@ let port = process.env.PORT || 6969;
 app.listen(port, () => {
   console.log("Server dang chay tren cong: " + port);
   console.log("http://localhost:8088/");
+  console.log("http://localhost:8088/home");
+  console.log("http://localhost:8088/about");
   console.log("http://localhost:8088/get-crud");
 });

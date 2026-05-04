@@ -1,7 +1,26 @@
 import CRUDService from "../services/CRUDService.js";
 
-let getHomePage = (req, res) => {
+let getBase = (req, res) => {
   return res.send("Trang chủ hệ thống - 23110197 - Bùi Hải Dương");
+};
+
+let getHomePage = async (req, res) => {
+  try {
+    let data = await CRUDService.getAllUser();
+    console.log("...........................");
+    console.log(data);
+    console.log("...........................");
+
+    return res.render("homepage.ejs", {
+      data: JSON.stringify(data),
+    });
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+let getAboutPage = (req, res) => {
+  return res.render("test/about.ejs");
 };
 
 let getCRUD = (req, res) => {
@@ -45,7 +64,9 @@ let deleteCRUD = async (req, res) => {
 };
 
 export default {
+  getBase,
   getHomePage,
+  getAboutPage,
   getCRUD,
   postCRUD,
   getFindAllCrud,
